@@ -8,6 +8,9 @@ class HelloController extends Controller
 {
     public function index()
     {
-        return view('hello_index');
+        $text = "Hello Cruel World";
+        return view('hello_index', ['text' => $text]);
+
+  
     } 
 }

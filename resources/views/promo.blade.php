@@ -298,6 +298,7 @@
         var page = 1;
         var magic = 3;
         var first = 0;
+        var memory_page = [];
 
 
 
@@ -531,17 +532,18 @@
             console.log('page selected '+num +'  current page ' +current_page +  '  total peerpage'+shard_page) ;
 
                 
-                
+            memory_page.push(num);    
 
                 let minLimit = num*20;
 
-                  if(minLimit < shard_page){
+                  if(minLimit < shard_page && memory_page.includes(num)==false ){
                 let row =6*page;
                 all_collection =  [];
                 setpCollection(current_catalog, current_category, '0', '0', '1',row);
                 
                 }
 
+                memory_page.push(num);    
 
 
             $('.page-item').each(function (idx,el) {

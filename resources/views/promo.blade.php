@@ -451,7 +451,7 @@
                     $('#pagination').html('<li id="parentPage0" class="page-item"><a id="backward" class="page-link" style="display:none;" aria-label="Previous"><span aria-hidden="true">«</span><span class="sr-only">Previous</span></a></li><li class="page-item"><a id="forward" class="page-link" aria-label="Next"><span aria-hidden="true">»</span><span class="sr-only">Next</span></a></li>');
                     for (let i = 1; i < totalPages + 1; i++) {
                         if(current_page==i){
-                            colorPage= 'background-color:black;color:white;';
+                            colorPage= 'background-color:#fff;color:black;';
                         }else{
                             colorPage='background-color:#fff;color:black';
                         }

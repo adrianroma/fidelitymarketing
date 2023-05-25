@@ -530,17 +530,7 @@
             console.log('numero pagina');
             console.log('page selected '+num +'  current page ' +current_page +  '  total peerpage'+shard_page) ;
 
-            if((current_page+1)!=num){
 
-                if(num*6<shard_page){
-                    let row = 20*(num+1);
-                    all_collection = [];
-                    setpCollection(current_catalog, current_category, '0', '0', 1,row);
-                }else{
-                    console.log('no es necesario cargar');
-                }
-
-            }
 
 
             $('.page-item').each(function (idx,el) {

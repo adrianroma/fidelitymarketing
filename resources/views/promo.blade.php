@@ -530,6 +530,17 @@
             console.log('numero pagina');
             console.log('page selected '+num +'  current page ' +current_page +  '  total peerpage'+shard_page) ;
 
+                
+                
+
+                let minLimit = num*20;
+
+                  if(minLimit < shard_page){
+                let row =6*page;
+                all_collection =  [];
+                setpCollection(current_catalog, current_category, '0', '0', '1',row);
+                
+                }
 
 
 

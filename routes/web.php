@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,3 +21,13 @@ Route::get('/', function () {
 
 
 Route::get('/hello', 'App\Http\Controllers\HelloController@index');
+
+Route::get('/promo', 'App\Http\Controllers\PromoController@index')->middleware('soap');
+
+Route::put('/promo', 'App\Http\Controllers\PromoController@index')->middleware('soap');
+
+Route::get('/prizes', 'App\Http\Controllers\PrizeController@index');
+
+Route::get('/player', 'App\Http\Controllers\PlayerController@index')->middleware('token');
+
+Route::post('/create_player', 'App\Http\Controllers\PlayerController@create');
